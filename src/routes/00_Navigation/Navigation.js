@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 const Navigation = () => {
   return (
     <div>
-      <div>Nevigation</div>
+      <div>Navigation</div>
       <Outlet />
     </div>
   );
