@@ -1,18 +1,21 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
-import logo from "../../assets/images/logo-PrimeTask.png";
+import Logo from "../../components/ui/logo/Logo";
+import { Container, NavLink } from "./Style";
 
 const Navigation = () => {
   return (
     <>
-      <div>
-        <Link to={"/employees"}>Employees</Link>
-        <Link to={"/"}>
-          <img src={logo} alt="Logo" />
-        </Link>
-        <Link to={"/tasks"}>Tasks</Link>
-      </div>
+      <Container>
+        <NavLink to={"/employees"}>Employees</NavLink>
+
+        <NavLink to={"/"} style={{ borderBottom: "none" }}>
+          <Logo />
+        </NavLink>
+
+        <NavLink to={"/tasks"}>Tasks</NavLink>
+      </Container>
       <Outlet />
     </>
   );
