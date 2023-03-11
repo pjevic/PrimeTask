@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Navigation from "./routes/00_navigation/Navigation";
-import Welcome from "./routes/01_table/00_welcome/Welcome";
-import Employees from "./routes/01_table/01_employees/Employees";
-import Tasks from "./routes/01_table/02_tasks/Tasks";
+import Welcome from "./routes/01_authentication/Authentication";
+import Employees from "./routes/01_employees/Employees";
+import Tasks from "./routes/02_tasks/Tasks";
 
 const App = () => {
   return (
