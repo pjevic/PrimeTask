@@ -16,7 +16,7 @@ function Employees() {
           <InputRow onSubmit={handleFormSubmit}>
             <FormInput label="full name" type="text" />
             <FormInput label="email" type="email" />
-            <FormInput label="phone number" type="tel" />
+            <FormInput label="phone number" type="number" />
             <FormInput label="date of birth" type="date" />
             <FormInput label="monthly salary" type="number" />
             <Button type="submit">add</Button>

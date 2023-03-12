@@ -1,0 +1,132 @@
+const EMPLOYEES = [
+  {
+    id: "FxosLmTf",
+    firstName: "Milan",
+    lastName: "Pjevic",
+    email: "milanpjevic@prime.intern.com",
+    phoneNumber: [{ countryCode: "+381", number: 613107611 }],
+    dateOfBirth: "30.03.1986.",
+    monthlySalary: 400,
+    isAdmin: true,
+    tasks: [
+      {
+        assigned: ["hZbIgpfY", "XkJdRsLm", "yNwAeKbC", "fUvGcQtS", "QoPzTnWx", "rMlOjEiD", "tVxYuHsF", "WqKpJnRt"],
+        notStarted: ["tVxYuHsF", "WqKpJnRt"],
+        inProgress: ["fUvGcQtS", "rMlOjEiD"],
+        stucked: ["QoPzTnWx"],
+        completed: [
+          { task: "hZbIgpfY", completedAt: "12.03.2023." },
+          { task: "XkJdRsLm", completedAt: "11.03.2023." },
+          { task: "yNwAeKbC", completedAt: "10.03.2023." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "ABCD1234",
+    firstName: "John",
+    lastName: "Doe",
+    email: "johndoe@prime.intern.com",
+    phoneNumber: [{ countryCode: "+359", number: 5551234567 }],
+    dateOfBirth: "01.01.1980.",
+    monthlySalary: 500,
+    isAdmin: false,
+    tasks: [
+      {
+        assigned: ["abc12345", "def23456", "ghi34567", "jkl45678", "mno56789"],
+        notStarted: ["def23456", "jkl45678", "mno56789"],
+        inProgress: ["abc12345", "ghi34567"],
+        stucked: [],
+        completed: [{ task: "def23456", completedAt: "10.03.2023." }],
+      },
+    ],
+  },
+  {
+    id: "EFGH5678",
+    firstName: "Jane",
+    lastName: "Smith",
+    email: "janesmith@prime.intern.com",
+    phoneNumber: [{ countryCode: "+359", number: 5559876543 }],
+    dateOfBirth: "15.08.1990.",
+    monthlySalary: 600,
+    isAdmin: false,
+    tasks: [
+      {
+        assigned: ["pqr78901", "stu89012", "vwx90123", "yza01234", "bcd12345"],
+        notStarted: ["vwx90123", "bcd12345"],
+        inProgress: ["stu89012", "yza01234"],
+        stucked: [],
+        completed: [
+          { task: "vwx90123", completedAt: "10.03.2023." },
+          { task: "bcd12345", completedAt: "11.03.2023." },
+          { task: "pqr78901", completedAt: "12.03.2023." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "IJKL9012",
+    firstName: "Bob",
+    lastName: "Johnson",
+    email: "bobjohnson@prime.intern.com",
+    phoneNumber: [{ countryCode: "+359", number: 5552468101 }],
+    dateOfBirth: "05.12.1985.",
+    monthlySalary: 500,
+    isAdmin: false,
+    tasks: [
+      {
+        assigned: ["efg45678", "hij56789", "klm67890", "nop78901", "qrs89012"],
+        notStarted: ["klm67890", "nop78901", "qrs89012"],
+        inProgress: ["efg45678", "hij56789"],
+        stucked: [],
+        completed: [
+          { task: "klm67890", completedAt: "10.03.2023." },
+          { task: "qrs89012", completedAt: "11.03.2023." },
+          { task: "nop78901", completedAt: "12.03.2023." },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "hTkViJpL",
+    firstName: "Bob",
+    lastName: "Smith",
+    email: "bobsmith@prime.intern.com",
+    phoneNumber: [{ countryCode: "+381", number: 5559876543 }],
+    dateOfBirth: "22.08.1991.",
+    monthlySalary: 400,
+    isAdmin: false,
+    tasks: [
+      {
+        assigned: ["AbCdEfGh", "JkLmNoPq", "OpQrStUv", "QrStUvWx", "XyZaBcDe"],
+        notStarted: ["AbCdEfGh", "JkLmNoPq"],
+        inProgress: [],
+        stucked: ["OpQrStUv"],
+        completed: [
+          { task: "QrStUvWx", completedAt: "04.03.2023." },
+          { task: "XyZaBcDe", completedAt: "01.03.2023." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "QwErTyUi",
+    firstName: "Emily",
+    lastName: "Davis",
+    email: "emilydavis@prime.intern.com",
+    phoneNumber: [{ countryCode: "+381", number: 5553456789 }],
+    dateOfBirth: "25.06.1992.",
+    monthlySalary: 400,
+    isAdmin: false,
+    tasks: [
+      {
+        assigned: ["BcDeFgHi", "IjKlMnOp", "GhIjKlMn", "KlMnOpQr", "MnOpQrSt", "OpQrStUv"],
+        notStarted: ["BcDeFgHi", "KlMnOpQr"],
+        inProgress: ["IjKlMnOp", "MnOpQrSt"],
+        stucked: ["OpQrStUv"],
+        completed: [{ task: "GhIjKlMn", completedAt: "09.03.2023." }],
+      },
+    ],
+  },
+];
