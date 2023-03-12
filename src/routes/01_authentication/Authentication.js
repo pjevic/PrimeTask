@@ -9,9 +9,9 @@ const Authentication = () => {
       <SubContainer>
         <SignIn />
       </SubContainer>
-      <SubContainer>
+      {/* <SubContainer>
         <SignUp />
-      </SubContainer>
+      </SubContainer> */}
     </Container>
   );
 };
