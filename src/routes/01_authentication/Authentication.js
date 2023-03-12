@@ -1,15 +1,19 @@
-import React from "react";
+import SignIn from "../../components/form_signin/SignIn";
+import SignUp from "../../components/form_signup/SiginUp";
 
-import SignIn from "../../components/sign-in-form/SignIn";
-import SignUp from "../../components/sign-up-form/SiginUp";
+import { Container, SubContainer } from "./Style";
 
-function Welcome() {
+const Authentication = () => {
   return (
-    <div>
-      <SignIn />
-      <SignUp />
-    </div>
+    <Container>
+      <SubContainer>
+        <SignIn />
+      </SubContainer>
+      <SubContainer>
+        <SignUp />
+      </SubContainer>
+    </Container>
   );
-}
+};
 
-export default Welcome;
+export default Authentication;
