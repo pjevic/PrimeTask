@@ -1,18 +1,31 @@
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { useContext } from "react";
+import { Outlet } from "react-router-dom";
+
+import { UserContext } from "../../context/user.context";
 
 import Logo from "../../components/ui/logo/Logo";
-import { Container, NavLink } from "./Style";
+import { Container, Subcontainer, NavLink, Button } from "./Style";
 
 const Navigation = () => {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signoutHandler = () => {
+    setCurrentUser();
+  };
+
   return (
     <>
       <Container>
         <NavLink to={"/employees"}>Employees</NavLink>
 
-        <NavLink to={"/"} style={{ borderBottom: "none" }}>
-          <Logo />
-        </NavLink>
+        <Subcontainer>
+          {currentUser ? <Button onClick={signoutHandler}>sign out</Button> : null}
+          <NavLink to={"/"}>
+            <Subcontainer>
+              <Logo />
+            </Subcontainer>
+          </NavLink>
+        </Subcontainer>
 
         <NavLink to={"/tasks"}>Tasks</NavLink>
       </Container>

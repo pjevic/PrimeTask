@@ -17,9 +17,23 @@ export const NavLink = styled(Link)`
 
   text-align: center;
   color: #ff9f1c;
-  /* background-color: #fd12; */
+  background-color: #fd12;
 
   border-bottom: 3px solid #ff9f1c;
 
-  width: 20%;
+  /* width: 20%; */
+
+  display: block;
+`;
+
+export const Subcontainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 6rem;
+`;
+
+export const Button = styled.button`
+  display: block;
 `;

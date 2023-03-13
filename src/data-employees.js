@@ -1,4 +1,4 @@
-const EMPLOYEES = [
+export const EMPLOYEES = [
   {
     id: "FxosLmTf",
     firstName: "Milan",
@@ -13,7 +13,7 @@ const EMPLOYEES = [
         assigned: ["hZbIgpfY", "XkJdRsLm", "yNwAeKbC", "fUvGcQtS", "QoPzTnWx", "rMlOjEiD", "tVxYuHsF", "WqKpJnRt"],
         notStarted: ["tVxYuHsF", "WqKpJnRt"],
         inProgress: ["fUvGcQtS", "rMlOjEiD"],
-        stucked: ["QoPzTnWx"],
+        stuck: ["QoPzTnWx"],
         completed: [
           { task: "hZbIgpfY", completedAt: "12.03.2023." },
           { task: "XkJdRsLm", completedAt: "11.03.2023." },
@@ -34,9 +34,9 @@ const EMPLOYEES = [
     tasks: [
       {
         assigned: ["abc12345", "def23456", "ghi34567", "jkl45678", "mno56789"],
-        notStarted: ["def23456", "jkl45678", "mno56789"],
+        notStarted: ["jkl45678", "mno56789"],
         inProgress: ["abc12345", "ghi34567"],
-        stucked: [],
+        stuck: [],
         completed: [{ task: "def23456", completedAt: "10.03.2023." }],
       },
     ],
@@ -53,9 +53,9 @@ const EMPLOYEES = [
     tasks: [
       {
         assigned: ["pqr78901", "stu89012", "vwx90123", "yza01234", "bcd12345"],
-        notStarted: ["vwx90123", "bcd12345"],
+        notStarted: [],
         inProgress: ["stu89012", "yza01234"],
-        stucked: [],
+        stuck: [],
         completed: [
           { task: "vwx90123", completedAt: "10.03.2023." },
           { task: "bcd12345", completedAt: "11.03.2023." },
@@ -76,13 +76,12 @@ const EMPLOYEES = [
     tasks: [
       {
         assigned: ["efg45678", "hij56789", "klm67890", "nop78901", "qrs89012"],
-        notStarted: ["klm67890", "nop78901", "qrs89012"],
+        notStarted: ["nop78901"],
         inProgress: ["efg45678", "hij56789"],
-        stucked: [],
+        stuck: [],
         completed: [
           { task: "klm67890", completedAt: "10.03.2023." },
           { task: "qrs89012", completedAt: "11.03.2023." },
-          { task: "nop78901", completedAt: "12.03.2023." },
         ],
       },
     ],
@@ -102,7 +101,7 @@ const EMPLOYEES = [
         assigned: ["AbCdEfGh", "JkLmNoPq", "OpQrStUv", "QrStUvWx", "XyZaBcDe"],
         notStarted: ["AbCdEfGh", "JkLmNoPq"],
         inProgress: [],
-        stucked: ["OpQrStUv"],
+        stuck: ["OpQrStUv"],
         completed: [
           { task: "QrStUvWx", completedAt: "04.03.2023." },
           { task: "XyZaBcDe", completedAt: "01.03.2023." },
@@ -121,10 +120,10 @@ const EMPLOYEES = [
     isAdmin: false,
     tasks: [
       {
-        assigned: ["BcDeFgHi", "IjKlMnOp", "GhIjKlMn", "KlMnOpQr", "MnOpQrSt", "OpQrStUv"],
+        assigned: ["BcDeFgHi", "IjKlMnOp", "GhIjKlMn", "KlMnOpQr", "MnOpQrSt"],
         notStarted: ["BcDeFgHi", "KlMnOpQr"],
         inProgress: ["IjKlMnOp", "MnOpQrSt"],
-        stucked: ["OpQrStUv"],
+        stuck: [],
         completed: [{ task: "GhIjKlMn", completedAt: "09.03.2023." }],
       },
     ],
