@@ -18,4 +18,14 @@ export const InputRow = styled.form`
   justify-content: space-around;
 `;
 
-export const DataRow = styled.div``;
+export const DataRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const EmpID = styled.div``;
+export const EmpFirstName = styled.div``;
+export const EmpLastName = styled.div``;
+export const EmpEmail = styled.div``;
+export const EmpCountryCode = styled.div``;
+export const EmpPhoneNumber = styled.div``;

@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, collection, writeBatch } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from "firebase/firestore";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDdwkoVOAdEiNY9fgSp0YdpuO8XG37hCn4",
@@ -37,6 +38,19 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   await batch.commit();
   console.log("done");
 };
+
+// export const getEmplyeesAndDocuments = async () => {
+//   const collectionRef = collection(db, "employees");
+//   const q = query(collectionRef);
+
+//   const querySnaphot = await getDoc(q);
+//   const employeesMap = querySnaphot.docs.reduce((acc, docSnapshot) => {
+//     const { id, firstName, lastName, email, phoneNumber } = docSnapshot.data();
+//     acc[id] = firstName;
+//     return acc;
+//   }, {});
+//   return employeesMap;
+// };
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
   if (!userAuth) return;
