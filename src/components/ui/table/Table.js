@@ -14,7 +14,7 @@ import {
   ActionHeading,
 } from "./Style";
 
-const Table = ({ heading, id }) => {
+const Table = ({ heading, id, ...otherProps }) => {
   return (
     <MainContainer>
       <Header>

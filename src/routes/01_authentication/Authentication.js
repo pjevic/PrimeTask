@@ -13,9 +13,9 @@ const Authentication = () => {
   return (
     <Container>
       <SubContainer>{!currentUser && <SignIn />}</SubContainer>
-      {/* <SubContainer>
+      <SubContainer>
         <SignUp />
-      </SubContainer> */}
+      </SubContainer>
     </Container>
   );
 };

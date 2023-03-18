@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Navigation from "./routes/00_navigation/Navigation";
@@ -13,7 +12,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Authentication />} />
         <Route path="/employee" element={<Employee />} />
-        <Route path="/zap" element={<Employees />} />
+        <Route path="/employees" element={<Employees />} />
         <Route path="/tasks" element={<Tasks />} />
       </Route>
     </Routes>
