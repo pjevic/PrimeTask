@@ -26,7 +26,7 @@ function Employees() {
         <div>ID: vzghndkksd</div>
       </Heading>
 
-      {currentUser ? (
+      {
         <>
           <Body>
             <div>
@@ -55,7 +55,7 @@ function Employees() {
 
           <SubmitButton type="submit">save</SubmitButton>
         </>
-      ) : null}
+      }
     </Container>
   );
 }
