@@ -1,31 +1,40 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  max-width: 120rem;
   background-color: #eee;
   margin: 0 3rem;
 `;
-export const Table = styled.div``;
+
+export const Heading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #777;
+  color: #fff;
+`;
 
 export const Title = styled.div`
   font-size: 2rem;
   text-align: center;
   padding: 1rem 0;
 `;
-export const Body = styled.div``;
+export const Body = styled.div`
+  display: flex;
+
+  padding: 6rem;
+`;
 
 export const InputRow = styled.form`
   display: flex;
-  justify-content: space-around;
 `;
 
-export const DataRow = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const PhotoContainer = styled.div`
+  width: 10rem;
+  height: 10rem;
+  background-color: #ddd;
+  margin: 3rem;
+  padding: 6rem;
 `;
 
-export const EmpID = styled.div``;
-export const EmpFirstName = styled.div``;
-export const EmpLastName = styled.div``;
-export const EmpEmail = styled.div``;
-export const EmpCountryCode = styled.div``;
-export const EmpPhoneNumber = styled.div``;
+export const SubmitButton = styled.button``;

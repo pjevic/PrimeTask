@@ -5,20 +5,7 @@ import { UserContext } from "../../context/user.context";
 import Button from "../../components/button/Button";
 import FormInput from "../../components/form_input/FormInput";
 
-import {
-  Container,
-  Table,
-  Title,
-  Body,
-  DataRow,
-  InputRow,
-  EmpID,
-  EmpFirstName,
-  EmpLastName,
-  EmpEmail,
-  EmpCountryCode,
-  EmpPhoneNumber,
-} from "./Style";
+import { Container, Heading, Title, Body, InputRow, PhotoContainer, SubmitButton } from "./Style";
 
 function Employees() {
   const handleFormSubmit = (e) => {
@@ -29,36 +16,46 @@ function Employees() {
 
   return (
     <Container>
-      <Table>
+      <Heading>
+        <div>
+          <Button>new</Button>
+          <Button>reset</Button>
+          <Button>del</Button>
+        </div>
         <Title>Employees</Title>
+        <div>ID: vzghndkksd</div>
+      </Heading>
 
-        {!currentUser ? (
+      {currentUser ? (
+        <>
           <Body>
-            <InputRow onSubmit={handleFormSubmit}>
-              <FormInput label="full name" type="text" />
-              <FormInput label="email" type="email" />
-              <FormInput label="phone number" type="number" />
-              <FormInput label="date of birth" type="date" />
-              <FormInput label="monthly salary" type="number" />
-              <Button type="submit">add</Button>
-              <Button type="button">edit</Button>
-              <Button type="button">del</Button>
-            </InputRow>
-            <DataRow>
-              <EmpID>NeekiID</EmpID>
-              <div>
-                <EmpFirstName>Milan</EmpFirstName>
-                <EmpLastName>Pjevic</EmpLastName>
-              </div>
-              <EmpEmail>milan@prime.intern.com</EmpEmail>
-              <div>
-                <EmpCountryCode>+381</EmpCountryCode>
-                <EmpPhoneNumber>613107611</EmpPhoneNumber>
-              </div>
-            </DataRow>
+            <div>
+              <InputRow onSubmit={handleFormSubmit}>
+                <FormInput label="first name" type="text" />
+                <FormInput label="last name" type="text" />
+                <FormInput label="monthly salary" type="number" />
+              </InputRow>
+
+              <InputRow>
+                <FormInput label="date of birth" type="date" />
+                <FormInput label="email" type="email" />
+                <Button type="button">email</Button>
+              </InputRow>
+
+              <InputRow>
+                <FormInput label="country of residence" type="text" />
+                <FormInput label="country code" type="text" />
+                <FormInput label="phone number" type="number" />
+                <Button>call</Button>
+              </InputRow>
+            </div>
+
+            <PhotoContainer>photo</PhotoContainer>
           </Body>
-        ) : null}
-      </Table>
+
+          <SubmitButton type="submit">save</SubmitButton>
+        </>
+      ) : null}
     </Container>
   );
 }
